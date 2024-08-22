@@ -15,7 +15,7 @@
             font-family: 'Morabba', sans-serif;
         }
         .level-text {
-            font-size: 0.75rem; /* کوچک کردن اندازه  */
+            font-size: 0.75rem; /* کوچک کردن اندازه لول */
         }
         button, .cursor-pointer {
             -webkit-tap-highlight-color: transparent;
@@ -52,37 +52,37 @@
 <body class="bg-gradient-to-b from-black to-gray-800 text-white font-morabba min-h-screen flex flex-col items-center p-4">
     <div class="w-full max-w-sm">
         <div class="text-center my-4">
-            <h1 class="text-2xl">Your Score</h1>
+            <h1 class="text-2xl">ذکرهای شما</h1>
             <div class="text-4xl font-bold my-2 flex justify-center items-center">
-                <span class="coin-icon text-3xl"></span>
+                <span class="coin-icon text-3xl">🪙</span>
                 <span id="balance" class="ml-2">0</span>
             </div>
         </div>
 
         <div class="my-4">
-            <h2 class="text-xl mb-2 text-right">Your Daily boosters:</h2>
+            <h2 class="text-xl mb-2 text-right">روزی‌های امروز</h2>
             <div class="flex justify-around">
                 <div id="turbo" class="bg-gray-700 bg-opacity-40 p-4 rounded-lg text-center w-1/2 mx-1 cursor-pointer">
                     <span class="text-2xl">🚀</span>
-                    <p>Multitap</p>
-                    <p id="turbo-count">3/3 </p>
+                    <p>افزایش سرعت صلوات</p>
+                    <p id="turbo-count">3/3 موجود</p>
                 </div>
                 <div id="full-energy" class="bg-gray-700 bg-opacity-40 p-4 rounded-lg text-center w-1/2 mx-1 cursor-pointer">
                     <span class="text-2xl">⚡</span>
-                    <p>Energy Limit</p>
-                    <p id="full-energy-count">3/3 </p>
+                    <p>تسبیح کامل روزانه</p>
+                    <p id="full-energy-count">3/3 موجود</p>
                 </div>
             </div>
         </div>
 
         <div class="my-4">
-            <h2 class="text-xl mb-2 text-right">Speed</h2>
+            <h2 class="text-xl mb-2 text-right">افزایش روزی</h2>
             <div id="divine-queen" class="bg-gray-700 bg-opacity-40 p-4 rounded-lg mb-2 cursor-pointer">
                 <div class="flex items-center justify-between">
                     <div class="flex items-center">
                         <span class="text-2xl">👑</span>
                         <div class="mr-2 text-right">
-                            <p>Bot </p>
+                            <p>حوری</p>
                             <p id="divine-queen-status" class="level-text"></p>
                         </div>
                     </div>
@@ -94,8 +94,8 @@
                     <div class="flex items-center">
                         <span class="text-2xl">👆</span>
                         <div class="mr-2 text-right">
-                            <p> Multitap</p>
-                            <p id="multi-hit-level" class="level-text">Level 1</p>
+                            <p> سرعت صلوات</p>
+                            <p id="multi-hit-level" class="level-text">لول 1</p>
                         </div>
                     </div>
                     <div class="text-gray-400" id="multi-hit-price">100</div>
@@ -106,8 +106,8 @@
                     <div class="flex items-center">
                         <span class="text-2xl">⚡</span>
                         <div class="mr-2 text-right">
-                            <p> Enrgy Limit</p>
-                            <p id="increase-energy-level" class="level-text">Level 1</p>
+                            <p> ظرفیت تسبیح</p>
+                            <p id="increase-energy-level" class="level-text">لول 1</p>
                         </div>
                     </div>
                     <div class="text-gray-400" id="increase-energy-price">500</div>
@@ -118,15 +118,15 @@
                     <div class="flex items-center">
                         <span class="text-2xl">⏱️</span>
                         <div class="mr-2 text-right">
-                            <p>Recharging Speed</p>
-                            <p id="increase-refill-speed-level" class="level-text">Buy Level</p>
+                            <p>سرعت پرشدن تسبیح</p>
+                            <p id="increase-refill-speed-level" class="level-text">لول 1</p>
                         </div>
                     </div>
                     <div class="text-gray-400" id="increase-refill-speed-price">100</div>
                 </div>
             </div>
         </div>
-        <button id="back-button" class="back-button">Back</button>
+        <button id="back-button" class="back-button">بازگشت به صفحه اصلی</button>
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -157,8 +157,8 @@
 
             // به‌روزرسانی نمایش تعداد استفاده‌ها
             function updateCounts() {
-                document.getElementById('turbo-count').textContent = `${turboUses}/3 `;
-                document.getElementById('full-energy-count').textContent = `${fullEnergyUses}/3 `;
+                document.getElementById('turbo-count').textContent = `${turboUses}/3 موجود`;
+                document.getElementById('full-energy-count').textContent = `${fullEnergyUses}/3 موجود`;
             }
 
             updateCounts();
@@ -166,24 +166,24 @@
             // بارگذاری لول و قیمت چند ضربه‌ای
             let multiHitLevel = parseInt(localStorage.getItem('multiHitLevel')) || 1;
             let multiHitPrice = parseInt(localStorage.getItem('multiHitPrice')) || 100;
-            document.getElementById('multi-hit-level').textContent = `Level ${multiHitLevel}`;
+            document.getElementById('multi-hit-level').textContent = `لول ${multiHitLevel}`;
             document.getElementById('multi-hit-price').textContent = multiHitPrice;
 
             // بارگذاری لول و قیمت افزایش ظرفیت انرژی
             let increaseEnergyLevel = parseInt(localStorage.getItem('increaseEnergyLevel')) || 1;
             let increaseEnergyPrice = parseInt(localStorage.getItem('increaseEnergyPrice')) || 500;
-            document.getElementById('increase-energy-level').textContent = `Level ${increaseEnergyLevel}`;
+            document.getElementById('increase-energy-level').textContent = `لول ${increaseEnergyLevel}`;
             document.getElementById('increase-energy-price').textContent = increaseEnergyPrice;
 
             // بارگذاری لول و قیمت سرعت پرشدن تسبیح
             let increaseRefillSpeedLevel = parseInt(localStorage.getItem('increaseRefillSpeedLevel')) || 1;
             let increaseRefillSpeedPrice = parseInt(localStorage.getItem('increaseRefillSpeedPrice')) || 100;
-            document.getElementById('increase-refill-speed-level').textContent = `Level ${increaseRefillSpeedLevel}`;
+            document.getElementById('increase-refill-speed-level').textContent = `لول ${increaseRefillSpeedLevel}`;
             document.getElementById('increase-refill-speed-price').textContent = increaseRefillSpeedPrice;
 
             // بارگذاری وضعیت ملکه الهی
             function updateDivineQueenStatus() {
-                const status = localStorage.getItem('divineQueenActive') === 'true' ? 'فعال' : 'Soon';
+                const status = localStorage.getItem('divineQueenActive') === 'true' ? 'فعال' : 'غیرفعال';
                 document.getElementById('divine-queen-status').textContent = status;
             }
 
@@ -204,7 +204,7 @@
                     multiHitPrice *= 2;
                     localStorage.setItem('multiHitLevel', multiHitLevel);
                     localStorage.setItem('multiHitPrice', multiHitPrice);
-                    document.getElementById('multi-hit-level').textContent = `Level ${multiHitLevel}`;
+                    document.getElementById('multi-hit-level').textContent = `لول ${multiHitLevel}`;
                     document.getElementById('multi-hit-price').textContent = multiHitPrice;
                     document.getElementById('balance').textContent = localStorage.getItem('userScore'); // به‌روزرسانی موجودی در صفحه
                     if (multiHitLevel === 15) {
@@ -227,7 +227,7 @@
                     currentEnergy += 50;
                     localStorage.setItem('userEnergy', currentEnergy);
 
-                    document.getElementById('increase-energy-level').textContent = `Level ${increaseEnergyLevel}`;
+                    document.getElementById('increase-energy-level').textContent = `لول ${increaseEnergyLevel}`;
                     document.getElementById('increase-energy-price').textContent = increaseEnergyPrice;
                     document.getElementById('balance').textContent = localStorage.getItem('userScore'); // به‌روزرسانی موجودی در صفحه
                     if (increaseEnergyLevel === 15) {
@@ -241,7 +241,7 @@
                     increaseRefillSpeedPrice *= 2;
                     localStorage.setItem('increaseRefillSpeedLevel', increaseRefillSpeedLevel);
                     localStorage.setItem('increaseRefillSpeedPrice', increaseRefillSpeedPrice);
-                    document.getElementById('increase-refill-speed-level').textContent = `Level ${increaseRefillSpeedLevel}`;
+                    document.getElementById('increase-refill-speed-level').textContent = `لول ${increaseRefillSpeedLevel}`;
                     document.getElementById('increase-refill-speed-price').textContent = increaseRefillSpeedPrice;
                     document.getElementById('balance').textContent = localStorage.getItem('userScore'); // به‌روزرسانی موجودی در صفحه
                     if (increaseRefillSpeedLevel === 5) {
@@ -250,7 +250,7 @@
                         document.getElementById('increase-refill-speed-price').textContent = '';
                     }
                 } else {
-                    alert('Error.');
+                    alert('موجودی کافی نیست یا لول به حداکثر رسیده است.');
                 }
             }
 

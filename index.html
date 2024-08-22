@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HPR</title>
+    <title>Notcoin</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         @font-face {
@@ -60,23 +60,26 @@
         }
     </style>
 </head>
+<body class="flex justify-center items-center h-screen bg-gradient-to-b from-black to-gray-900 text-white transition-colors duration-500">
+    <div class="ribbon">
+        <span></span>
     </div>
     <div class="container text-center flex flex-col items-center w-11/12 max-w-lg">
         <div class="score text-2xl flex items-center justify-center mb-1">
-            <span class="coin-icon text-xl mr-2"></span>
+            <span class="coin-icon text-xl mr-2">🕋</span>
             <span id="score">0</span>
         </div>
         <div class="rank my-1 mb-5">
-            <span id="rank-text">noob</span>
+            <span id="rank-text">لیگ برنز</span>
         </div>
         <div class="button-container flex justify-center items-center flex-grow w-full relative my-5">
-            <img id="golden-image" class="golden-image w-41 rounded-full cursor-pointer transition-transform duration-70" src="HPR.png" alt="امام" onclick="handleClick()">
+            <img id="golden-image" class="golden-image w-41 rounded-full cursor-pointer transition-transform duration-70" src="emam.png" alt="امام" onclick="handleClick()">
         </div>
         <div class="energy-container flex items-center w-full my-5">
             <div class="energy flex items-center mr-2">
-                <span class="lightning mr-1"></span>
-                <span id="energy">5--</span>
-                <span id="max-energy">/500</span>
+                <span class="lightning mr-1">📿</span>
+                <span id="energy">150</span>
+                <span id="max-energy">/150</span>
             </div>
             <div class="energy-bar-container flex-grow h-5 bg-white bg-opacity-20 rounded-full">
                 <div id="energy-bar" class="energy-bar h-full bg-green-500 rounded-full transition-all duration-500"></div>
@@ -85,8 +88,8 @@
         <div class="footer flex flex-col items-center w-full">
             <div class="menu flex justify-around bg-white bg-opacity-10 p-5 rounded-lg w-full box-border relative backdrop-blur-md">
                 <!-- <span>🧸 یاران حق</span> -->
-                <span id="task-link" class="cursor-pointer">Task</span>
-                <span id="mostahabat-link" class="cursor-pointer">Boost</span>
+                <span id="task-link" class="cursor-pointer">🪙 واجبات</span>
+                <span id="mostahabat-link" class="cursor-pointer">🚀 مستحبات</span>
             </div>
         </div>
     </div>
